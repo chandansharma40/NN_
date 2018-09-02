@@ -10,7 +10,7 @@ class DataFunc(object):
                 labels = np.frombuffer(f.read(), np.uint8, offset=8)
         print("Done")
 
-        return labels
+        return np.array(labels)
 
     def _load_img(self, file_name):
         #file_path = dataset_dir + "/" + file_name
@@ -22,4 +22,4 @@ class DataFunc(object):
         data = data.reshape(-1, 784)
         print("Done")
 
-        return data
+        return np.array(data)
